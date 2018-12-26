@@ -1,0 +1,24 @@
+<div class = "grid-x grid-padding=x">
+  <div class = "large-12 cell">
+    <h2>Search by <%= @type %>:</h2>
+  </div>
+</div>
+
+<form method="get">
+  <div class="grid-x grid-padding-x" style="margin-bottom: 15px;">
+    <div class="medium-6 cell">
+      <% if @type == 'phone' %>
+        <input type="number" placeholder="123456" name="<%= @type %>" pattern="^[0-9]{6}$" required>
+      <% else %>
+        <input type="text" placeholder="FirstName LastName" name="<%= @type %>" pattern="^[a-zA-Z]+ [a-zA-Z]+$" required>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+      <div class="lagre-12 cell">
+        <input type="submit" value="<%= @action || 'Find' %> subscribers" class="button success">
+        <a href="/" class="button primary">Back to menu</a>
+      </div>
+  </div>
+</form>

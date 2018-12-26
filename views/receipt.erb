@@ -1,0 +1,28 @@
+<div class = "grid-x grid-padding=x">
+  <div class = "large-12 cell">
+    <h2>Calc your payment for last month</h2>
+  </div>
+</div>
+
+<% if @sum %>
+  <div class="large-12 cell">
+    <h3><%= @sum %></h3>
+  </div>
+<% end %>
+
+<form method="get">
+  <div class="grid-x grid-padding-x" style="margin-bottom: 15px;">
+    <div class="medium-6 cell">      
+      <input type="number" placeholder="123456" name="phone" pattern="^[0-9]{6}$" required value="<%= params['phone'] %>">
+    
+      <input type="number" placeholder="Minutes" name="minutes" pattern="^[0-9]+$" required value="<%= params['minutes'] %>">
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+      <div class="lagre-12 cell">
+        <input type="submit" value="Calc" class="button success">
+        <a href="/" class="button primary">Back to menu</a>
+      </div>
+  </div>
+</form>

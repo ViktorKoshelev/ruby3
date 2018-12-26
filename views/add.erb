@@ -1,0 +1,22 @@
+<div class = "grid-x grid-padding=x">
+  <div class = "large-12 cell">
+    <h2>Add new subscriber</h2>
+  </div>
+</div>
+
+<form method="post">
+  <div class="grid-x grid-padding-x" style="margin-bottom: 15px;">
+    <div class="medium-6 cell">      
+      <input type="text" placeholder="First name" name="first" pattern="^[a-zA-Z]+$" required>
+      <input type="text" placeholder="Last name" name="last" pattern="^[a-zA-Z]+$" required>
+      <input type="number" placeholder="Tarif [1, 2, 3]" name="tarif" pattern="^[1-3]$" required>
+    </div>
+  </div>
+
+  <div class="grid-x grid-padding-x">
+      <div class="lagre-12 cell">
+        <input type="submit" value="Add" class="button success">
+        <a href="/" class="button primary">Back to menu</a>
+      </div>
+  </div>
+</form>
