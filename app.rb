@@ -82,7 +82,7 @@ post '/add' do
     @title = 'User added'
     @sub = { 'firstName' => params['first'], 'lastName' => params['last'],
              'tarif' => Integer(params['tarif']) }
-    @number = settings.company.add_subscriber
+    @number = settings.company.add_subscriber(@sub)
     @subscribers = settings.company.find_subscriber_by_number(@number)
     erb :all
   end
